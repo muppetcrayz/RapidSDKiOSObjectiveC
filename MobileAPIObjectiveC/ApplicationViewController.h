@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "globals.h"
 
 @interface ApplicationViewController : UIViewController
 

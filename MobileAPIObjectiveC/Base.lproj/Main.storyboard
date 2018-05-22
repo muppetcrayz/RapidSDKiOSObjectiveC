@@ -217,6 +217,9 @@
                                 <rect key="frame" x="304" y="617" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOutPressed:" destination="reE-j2-3mA" eventType="touchUpInside" id="PZt-6r-7dg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -227,6 +230,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GJZ-2J-pk4"/>
                     </view>
+                    <connections>
+                        <outlet property="logOutButton" destination="R2U-f4-yaK" id="w8s-OK-exh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VRx-4U-yUF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

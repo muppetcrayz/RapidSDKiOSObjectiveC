@@ -77,7 +77,7 @@
 }
 
 - (IBAction)cancelPressed:(id)sender {
-    [self dismissViewControllerAnimated:NO completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)submitPressed:(id)sender {
