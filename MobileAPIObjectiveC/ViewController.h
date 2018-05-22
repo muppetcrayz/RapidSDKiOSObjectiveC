@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import "globals.h"
 
 @interface ViewController : UIViewController<UITextFieldDelegate>
 

@@ -13,8 +13,9 @@
 		08156F5820AB2AF0003F73CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08156F5620AB2AF0003F73CA /* LaunchScreen.storyboard */; };
 		08156F5B20AB2AF0003F73CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08156F5A20AB2AF0003F73CA /* main.m */; };
 		08156F6520AB2AF0003F73CA /* MobileAPIObjectiveCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08156F6420AB2AF0003F73CA /* MobileAPIObjectiveCTests.m */; };
+		0816D9E220B4BC9D009CBD21 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089846FF20B49F9D001F07B4 /* SignUpViewController.m */; };
+		0816D9E520B4BEB3009CBD21 /* ApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0816D9E420B4BEB3009CBD21 /* ApplicationViewController.m */; };
 		089846FD20B49F83001F07B4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089846FC20B49F82001F07B4 /* ViewController.m */; };
-		0898470020B49F9D001F07B4 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089846FF20B49F9D001F07B4 /* SignUpViewController.m */; };
 		0898470220B4B52F001F07B4 /* globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 0898470120B4B52F001F07B4 /* globals.m */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,8 @@
 		08156F6020AB2AF0003F73CA /* MobileAPIObjectiveCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileAPIObjectiveCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08156F6420AB2AF0003F73CA /* MobileAPIObjectiveCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileAPIObjectiveCTests.m; sourceTree = "<group>"; };
 		08156F6620AB2AF0003F73CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0816D9E320B4BEB3009CBD21 /* ApplicationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationViewController.h; sourceTree = "<group>"; };
+		0816D9E420B4BEB3009CBD21 /* ApplicationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationViewController.m; sourceTree = "<group>"; };
 		089846FC20B49F82001F07B4 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		089846FE20B49F9D001F07B4 /* SignUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		089846FF20B49F9D001F07B4 /* SignUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 				08156F4C20AB2AEF003F73CA /* AppDelegate.m */,
 				08156F4E20AB2AEF003F73CA /* ViewController.h */,
 				089846FC20B49F82001F07B4 /* ViewController.m */,
+				0816D9E320B4BEB3009CBD21 /* ApplicationViewController.h */,
+				0816D9E420B4BEB3009CBD21 /* ApplicationViewController.m */,
 				08156F5120AB2AEF003F73CA /* Main.storyboard */,
 				08156F5420AB2AF0003F73CA /* Assets.xcassets */,
 				08156F5620AB2AF0003F73CA /* LaunchScreen.storyboard */,
@@ -213,10 +218,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0816D9E220B4BC9D009CBD21 /* SignUpViewController.m in Sources */,
 				089846FD20B49F83001F07B4 /* ViewController.m in Sources */,
 				0898470220B4B52F001F07B4 /* globals.m in Sources */,
+				0816D9E520B4BEB3009CBD21 /* ApplicationViewController.m in Sources */,
 				08156F5B20AB2AF0003F73CA /* main.m in Sources */,
-				0898470020B49F9D001F07B4 /* SignUpViewController.m in Sources */,
 				08156F4D20AB2AEF003F73CA /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "globals.h"
 
 @interface ViewController ()
 
@@ -45,11 +44,14 @@
             if (completed) {
                 if (![session_id isEqual: @""]) {
                     dispatch_async(dispatch_get_main_queue(), ^ {
-                    [self performSegueWithIdentifier:@"loginSegue" sender:self->_submitButton];
+                        [self performSegueWithIdentifier:@"loginSegue" sender:self->_submitButton];
                     });
                 }
                 else {
-                    self->_incorrectLabel.hidden = false;
+                    dispatch_async(dispatch_get_main_queue(), ^ {
+                        self->_incorrectLabel.hidden = false;
+                    });
+                        
                 }
             }
         }];
