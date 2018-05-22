@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 
+// apiKey:apiSecret for your specific application
+NSString *var = @"4abc7598e1f28e394d57f50396c92a160671b575776ed10d885281eb94db7259:eb1f101fe943b41526ae1c5e54089834badbab836e87f73ee1b6047e30a41c68";
+
 @interface AppDelegate ()
 
 @end
