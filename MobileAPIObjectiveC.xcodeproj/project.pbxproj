@@ -15,6 +15,7 @@
 		08156F6520AB2AF0003F73CA /* MobileAPIObjectiveCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08156F6420AB2AF0003F73CA /* MobileAPIObjectiveCTests.m */; };
 		089846FD20B49F83001F07B4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089846FC20B49F82001F07B4 /* ViewController.m */; };
 		0898470020B49F9D001F07B4 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089846FF20B49F9D001F07B4 /* SignUpViewController.m */; };
+		0898470220B4B52F001F07B4 /* globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 0898470120B4B52F001F07B4 /* globals.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		089846FC20B49F82001F07B4 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		089846FE20B49F9D001F07B4 /* SignUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		089846FF20B49F9D001F07B4 /* SignUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		0898470120B4B52F001F07B4 /* globals.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = globals.m; sourceTree = "<group>"; };
+		0898470320B4B536001F07B4 /* globals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = globals.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 			children = (
 				089846FE20B49F9D001F07B4 /* SignUpViewController.h */,
 				089846FF20B49F9D001F07B4 /* SignUpViewController.m */,
+				0898470120B4B52F001F07B4 /* globals.m */,
+				0898470320B4B536001F07B4 /* globals.h */,
 				08156F4B20AB2AEF003F73CA /* AppDelegate.h */,
 				08156F4C20AB2AEF003F73CA /* AppDelegate.m */,
 				08156F4E20AB2AEF003F73CA /* ViewController.h */,
@@ -209,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				089846FD20B49F83001F07B4 /* ViewController.m in Sources */,
+				0898470220B4B52F001F07B4 /* globals.m in Sources */,
 				08156F5B20AB2AF0003F73CA /* main.m in Sources */,
 				0898470020B49F9D001F07B4 /* SignUpViewController.m in Sources */,
 				08156F4D20AB2AEF003F73CA /* AppDelegate.m in Sources */,
