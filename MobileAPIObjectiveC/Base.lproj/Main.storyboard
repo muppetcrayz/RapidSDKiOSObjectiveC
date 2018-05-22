@@ -27,29 +27,29 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incorrect username or password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VnG-f0-Hrq">
+                                        <rect key="frame" x="3" y="24.5" width="209" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yjZ-l1-rfJ">
                                         <rect key="frame" x="0.0" y="28.5" width="215" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="usernameField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="iXU-mK-nme"/>
-                                        </connections>
+                                        <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w7P-D6-8H9">
                                         <rect key="frame" x="0.0" y="66.5" width="215" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="passwordField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="RBI-x2-nDt"/>
-                                        </connections>
+                                        <textInputTraits key="textInputTraits" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46f-b3-0DV">
                                         <rect key="frame" x="83" y="104.5" width="49" height="30"/>
                                         <state key="normal" title="Submit"/>
                                         <connections>
-                                            <action selector="submitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ox6-1c-Jtv"/>
+                                            <action selector="submitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jvx-0e-R8H"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQg-a5-jxq">
@@ -77,8 +77,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="incorrectLabel" destination="VnG-f0-Hrq" id="pTI-a3-ebK"/>
                         <outlet property="passwordField" destination="w7P-D6-8H9" id="Kxy-Qu-wtT"/>
-                        <outlet property="signUpButton" destination="bQg-a5-jxq" id="8XS-Fx-YFm"/>
+                        <outlet property="signUpButton" destination="bQg-a5-jxq" id="ahi-R9-Yad"/>
+                        <outlet property="submitButton" destination="46f-b3-0DV" id="ACY-it-pJs"/>
                         <outlet property="usernameField" destination="yjZ-l1-rfJ" id="orh-1p-os7"/>
                         <segue destination="HYb-8S-WP4" kind="show" identifier="logInToSignUpSegue" id="NFl-sh-fjE"/>
                         <segue destination="reE-j2-3mA" kind="show" identifier="loginSegue" id="4dd-VL-hz6"/>

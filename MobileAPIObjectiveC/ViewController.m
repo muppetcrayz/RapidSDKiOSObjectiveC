@@ -10,14 +10,16 @@
 
 NSString *session_id = @"";
 NSString *user_id = @"";
+NSString *var = @"4abc7598e1f28e394d57f50396c92a160671b575776ed10d885281eb94db7259:eb1f101fe943b41526ae1c5e54089834badbab836e87f73ee1b6047e30a41c68";
 
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UIButton *signUpButton;
-- (IBAction)submitPressed;
-
+@property (weak, nonatomic) IBOutlet UIButton *submitButton;
+@property (weak, nonatomic) IBOutlet UILabel *incorrectLabel;
+- (IBAction)submitPressed:(id)sender;
 
 @end
 
@@ -36,23 +38,68 @@ NSString *user_id = @"";
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [self submitPressed];
+    [self submitPressed:_submitButton];
     return YES;
 }
 
-//- (void)inputIsValid:(completion:
-
-- (IBAction)submitPressed {
+- (IBAction)submitPressed:(id)sender {
     if ([_usernameField hasText] && [_passwordField hasText]) {
-        
+        [self inputIsValid:^(BOOL completed) {
+            if (completed) {
+                if (![session_id isEqual: @""]) {
+                    dispatch_async(dispatch_get_main_queue(), ^ {
+                    [self performSegueWithIdentifier:@"loginSegue" sender:self->_submitButton];
+                    });
+                }
+                else {
+                    self->_incorrectLabel.hidden = false;
+                }
+            }
+        }];
     }
     else {
-        
-    }
+            _incorrectLabel.hidden = false;
+        }
 }
 
-- (IBAction)signUpPressed {
+- (void)inputIsValid:(void (^)(BOOL))completed {
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.dubtel.com/v1/login"]];
+    
+    [request setHTTPMethod:@"POST"];
+    
+    NSString *postString = [NSString stringWithFormat:@"username=%@&password=%@", _usernameField.text, _passwordField.text];
+    
+    NSData *nsdata = [var dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *token = [nsdata base64EncodedStringWithOptions:0];
+    
+    [request setValue: [NSString stringWithFormat:@"Basic %@", token] forHTTPHeaderField: @"Authorization"];
+    
+    [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request
+                                            completionHandler:
+                                  ^(NSData *data, NSURLResponse *response, NSError *error) {
+                                      
+                                      NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+                                      
+                                      if ([[jsonObject valueForKey:@"status"] isEqual: @"Success"]) {
+                                          session_id = [jsonObject objectForKey:@"session_id"];
+                                          user_id = [jsonObject objectForKey:@"user_id"];
+                                          completed(YES);
+                                      }
+                                      else {
+                                          completed(NO);
+                                      }
+                                  
+                                  }];
+    
+    [task resume];
+    
+}
+
+- (IBAction)signUpPressed:(id)sender {
     [self performSegueWithIdentifier:@"logInToSignUpSegue" sender:_signUpButton];
 }
-                      
+
 @end
