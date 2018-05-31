@@ -91,12 +91,14 @@
                 }
                 else {
                     self->_couldNotRegisterLabel.hidden = false;
+                    self->_missingLabel.hidden = true;
                 }
             }
         }];
     }
     else {
         _missingLabel.hidden = false;
+        _couldNotRegisterLabel.hidden = true;
     }
 }
 @end
