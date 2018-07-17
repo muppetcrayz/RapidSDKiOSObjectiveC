@@ -15,5 +15,6 @@ Firstly, you must change the `var` located in the `globals.m` file to be your `a
 
 ## Authors
 * Sage Conger - [sagealessandra](https://github.com/sagealessandra)
+* John Opoku - [johnopoku](https://github.com/johnopoku)
 
 Powered by Dubtel Consulting, LLC.
