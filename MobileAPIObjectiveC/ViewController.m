@@ -66,7 +66,7 @@
     
     [request setHTTPMethod:@"POST"];
     
-    NSString *postString = [NSString stringWithFormat:@"username=%@&password=%@", _usernameField.text, _passwordField.text];
+    NSString *postString = [NSString stringWithFormat:@"email=%@&password=%@", _usernameField.text, _passwordField.text];
     
     NSData *nsdata = [var dataUsingEncoding:NSUTF8StringEncoding];
     NSString *token = [nsdata base64EncodedStringWithOptions:0];
